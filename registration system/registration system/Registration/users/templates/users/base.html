@@ -1,0 +1,155 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %} </title>
+
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0; /* Remove default margin */
+            color: #333; /* Dark gray text color */
+            background: linear-gradient(to bottom right, #15202c, #12047e);
+
+        }
+
+        .container {
+            margin-top: 20px; /* Add space at the top */
+            background-color: rgba(255, 255, 255, 0.894); /* Semi-transparent white background */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Add padding */
+        }
+
+        .navbar {
+            background-color: aliceblue; /* Semi-transparent white background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 18px 10px; /* Add vertical padding */
+            border-radius: 10px; /* Rounded corners */
+            border: 2px solid #0c1f34; /* Blue border */
+        }
+
+        .navbar-brand {
+            font-size: 1.8em; /* Larger navbar brand font size */
+            font-weight: bold;
+            color: #10161d; /* Blue color for navbar brand */
+        }
+
+        .navbar-toggler {
+            border: none; /* Remove border */
+            outline: none; /* Remove outline */
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 20px; /* Add space between navbar items */
+            font-weight: bold;
+        }
+
+        .nav-item a {
+            color: #007bff; /* Blue color for navbar links */
+            transition: color 0.3s; /* Smooth transition */
+        }
+
+        .nav-item a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        .alert {
+            margin-top: 20px; /* Add space at the top */
+            border-radius: 5px;
+        }
+
+        .close {
+            font-size: 1.2em;
+        }
+
+        /* Additional styles for profile and logout buttons */
+        .profile-button,
+        .logout-button {
+            padding: 10px 20px; /* Add padding to buttons */
+            font-size: 1em; /* Adjust font size */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #182838; /* Blue border */
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            color: #007bff; /* Blue text color */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            margin-left: 10px; /* Add space between buttons */
+        }
+
+        .profile-button:hover,
+        .logout-button:hover {
+            background-color: #15212d; /* Blue background on hover */
+            color: #fff; /* White text color on hover */
+        }
+
+        .profile-button i,
+        .logout-button i {
+            margin-right: 5px; /* Add space between icon and text */
+        }
+
+        .sign-in-icon {
+            margin-right: 5px; /* Add space between icon and text */
+        }
+    </style>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="noBack();">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <a href="/" class="navbar-brand" style="color: #051627;">Home</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'users-profile' %}" class="nav-item nav-link profile-button"><i class="fas fa-user"></i> Profile</a>
+                        <a href="{% url 'logout' %}" class="nav-item nav-link logout-button" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        {% else %}
+                        <a href="{% url 'login' %}" class="nav-item nav-link btn btn-primary"><i class="fas fa-sign-in-alt sign-in-icon"></i>Sign in</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+            <!--Any flash messages pop up in any page because this is the base template-->
+            {% if messages %}
+            <div class="alert alert-dismissible" role="alert">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-A
+
+</body>
+</html>

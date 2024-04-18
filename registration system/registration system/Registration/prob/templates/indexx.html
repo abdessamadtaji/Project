@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Probabilité unique</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.calculator {
+    background-color: rgb(40 131 230 / 46%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgb(17 5 60 / 69%);
+    padding: 20px;
+    width: 1000px;
+}
+
+.calculator2 {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    width: 1000px;
+}
+
+button {
+    position: relative;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    width: 140px;
+    height: 50px;
+    border-radius: 40px;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgb(40, 131, 230);
+    color: white;
+}
+
+label, input, button {
+    margin-bottom: 10px;
+    display: block;
+}
+
+input {
+    padding: 10px;
+}
+
+.calculator h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.input-container {
+    margin-top: 15px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container select {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+        .option {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    
+        .calculation-type {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .calculation-type:hover {
+            background-color: #4558c4;
+            transform: scale(1.05); /* Augmente légèrement la taille au survol */
+        }
+    
+        .calculation-type:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calcul de Probabilité</h1>
+        <div class="input-container">
+            <label for="typeCalcul">Type de Calcul :</label>
+            <div class="option">
+                <a href="{% url 'probabiliteUnique' %}" class="calculation-type" data-type="probabiliteUnique">Probabilité d'événement unique</a>
+                <a href="{% url 'probabiliteMultiple' %}" class="calculation-type" data-type="probabiliteMultiple">Probabilité d'événement multiple</a>
+                <a href="{% url 'probabiliteDeuxEvenements' %}" class="calculation-type" data-type="probabiliteDeuxEvenements">Probabilité de deux événements</a>
+                <a href="{% url 'probabiliteConditionnelle' %}" class="calculation-type" data-type="probabiliteConditionnelle">Probabilité conditionnelle P(A|B)</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Probabilité unique</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calcul de Probabilité</h1>
+
+        <label for="resultats">Nombre de résultats possibles :</label>
+        <input type="number" id="resultats" min="1" required>
+
+        <label for="evenements">Nombre d'événements survenus (n) A :</label>
+        <input type="number" id="evenements" min="0" required>
+
+        <button onclick="calculerProbabilite()">Calculer</button>
+
+        <div id="resultatsProbabilite" style="display: none;">
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/pic1.png' %}">
+                <p><strong>Probabilité d'événement qui se produit P (A):</strong> <span id="probabiliteA"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/pic2.png' %}">
+                <p><strong>Probabilité d'événement qui ne se produit pas P (A '):</strong> <span id="probabiliteAComplement"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'js/script1.js' %}"></script>
+</body>
+</html>

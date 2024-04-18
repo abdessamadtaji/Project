@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics and proba Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke; /* Changed background color */
+            animation: change-background 20s infinite linear;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.17); /* White with 17% transparency */
+            border-radius: 16px; /* Rounded corners */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            backdrop-filter: blur(8.5px); /* Adds blur effect to the background */
+            -webkit-backdrop-filter: blur(8.5px); /* For Safari */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Border with 30% transparency */
+            color: black; /* Adjust text color */
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Statistics and probability Videos</h1>
+        {% for video in videos %}
+        <video controls>
+            <source src="{{ video.video_file.url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>{{ video.title }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

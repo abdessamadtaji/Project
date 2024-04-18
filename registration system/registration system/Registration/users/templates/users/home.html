@@ -1,0 +1,85 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:#041E42;
+    text-align: center;
+    height: 100vh;
+}
+
+        .jumbotron {
+
+            padding: 40px;
+            margin-top: 50px;
+/* From https://css.glass */
+background: rgba(8, 15, 61, 0.68);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.8px);
+-webkit-backdrop-filter: blur(8.8px);
+border: 1px solid rgba(8, 15, 61, 1);
+        }
+        .jumbotron h1 {
+            color: #007bff; /* Blue heading */
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .jumbotron .lead {
+            color: #444; /* Dark gray lead text */
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .jumbotron hr {
+            border-top: 2px solid #007bff; /* Blue horizontal rule */
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .jumbotron .btn {
+            background-color: #007bff; /* Blue button */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .jumbotron .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome, {{user.first_name.title|default:'Guest'}}</h1>
+        <p class="lead" style="color:black;">
+           Bienvenue Dans Notre Site!!
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            {% if user.is_authenticated %}
+                
+            {% else %}
+                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a>
+            {% endif %}
+        </p>
+    </div>
+
+
+{% endblock content %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Récupérer le bouton "Back"
+        var backButton = document.getElementById("backButton");
+
+        // Désactiver le bouton "Back"
+        backButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Empêcher le comportement par défaut du clic
+        });
+    });
+</script>

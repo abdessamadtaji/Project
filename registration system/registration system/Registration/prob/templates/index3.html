@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Probabilité de deux événements</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calcul de Probabilité</h1>
+
+        <label for="probabiliteA">Probabilité de P(A) :</label>
+        <input type="number" id="probabiliteA" min="0" max="1" step="0.01" placeholder="0.00" required>
+
+        <label for="probabiliteB">Probabilité de P(B) :</label>
+        <input type="number" id="probabiliteB" min="0" max="1" step="0.01" placeholder="0.00" required>
+
+        <button onclick="calculerProbabilite()">Calculer</button>
+
+        <div id="resultatsProbabilite" style="display: none;">
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/1.png' %}">
+                <p><strong>Probabilité d'événement qui ne se produit pas P (A '):</strong> <span id="probabiliteAComplement"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/2.png' %}">
+                <p><strong>Probabilité que l'événement B ne se produise pas P (B '):</strong> <span id="probabiliteBComplement"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/3.png' %}">
+                <p><strong>Probabilité que les deux événements se produisent P (A ∩ B):</strong> <span id="probabiliteIntersection"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/4.png' %}">
+                <p><strong>Probabilité que l'un ou l'autre des événements se produise P (A ∪ B):</strong> <span id="probabiliteUnion"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/5.png' %}">
+                <p><strong>Probabilité que A ou B se produise mais pas les deux P (AΔB):</strong> <span id="probabiliteSymDifference"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/6.png' %}">
+                <p><strong>Probabilité que ni A ni B n'apparaissent P ((A∪B) '):</strong> <span id="probabiliteUnionComplement"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/7.png' %}">
+                <p><strong>Probabilité de A se produisant mais non B:</strong> <span id="probabiliteAIntersectBComplement"></span></p>
+            </div>
+            <div class="probability-info">
+                <img class="probability-image" src="{% static 'images/8.png' %}">
+                <p><strong>Probabilité de B se produisant mais non A:</strong> <span id="probabiliteBIntersectAComplement"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/scrip.js' %}"></script>
+</body>
+</html>

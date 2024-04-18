@@ -1,0 +1,136 @@
+{% extends "admin/base.html" %}
+
+{% comment %} {% load i18n  eatn_tags static %} {% endcomment %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{{ title }} | {% trans "CalculICraft  | ADMIN " %}{% endblock %}
+
+{% block extrastyle %}
+    
+    <style>
+        /* Styles pour un look plus créatif */
+
+        /* Arrière-plan général */
+      /* Arrière-plan général */
+body {
+    background-color: #01162b; /* Dégradé diagonal */
+    font-family: 'Arial', sans-serif;
+    color: #991111; /* Texte blanc */
+    background-size: 400% 400%; /* Taille du dégradé */
+    /* Animation du dégradé */
+}
+
+/* Animation du dégradé */
+
+
+      
+
+        /* Navigation */
+        #nav-global {
+            background-color: #060c24; /* Bleu marine légèrement plus clair */
+            padding: 10px 0;
+        }
+
+        #nav-global ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #nav-global ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        #nav-global ul li a {
+            color: #fff; /* Texte blanc */
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        /* Contenu */
+        #content {
+    background-color: rgba(0, 0, 0, 0); /* Arrière-plan transparent */
+    padding: 20px;
+    border-radius: 10px;
+    border: none; /* Supprimer la bordure */
+    backdrop-filter: blur(10px); /* Effet de flou pour le verre */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Ombre pour le verre */
+}
+#header {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #090f2e;
+    color: var(--header-color);
+    overflow: hidden;
+}
+
+
+        .module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    text-align: left;
+    background: #060c24;
+    color: var(--header-link-color);
+}
+        /* Liens */
+        a {
+            color: #dfe5ec; /* Bleu clair */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #01162b; /* Bleu acier */
+        }
+
+        /* Boutons */
+        .button {
+            background-color: #01162b; /* Bleu clair */
+            color: #fff; /* Texte blanc */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4682b4; /* Bleu acier */
+        }
+        .button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #090f2e;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: var(--button-fg);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+    </style>
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">{% trans "CalculICraft | ADMIN" %}</h1>
+{% endblock %}
+
+{% block nav-global %}
+   
+{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <!-- Votre contenu ici -->
+        <p>Welcome to your creative admin dashboard!</p>
+        <a href="#" class="button">Get Started</a>
+    </div>
+{% endblock %}

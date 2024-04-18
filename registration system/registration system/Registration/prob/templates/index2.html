@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Probabilité d'événements multiples</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calcul de Probabilité</h1>
+
+        <div id="inputsAndButton">
+            
+            <label for="resultats">Nombre de résultats possibles (n):</label>
+            <input type="number" id="resultats" min="1" required>
+
+            <label for="evenementsA">Nombre d'événements (n) A:</label>
+            <input type="number" id="evenementsA" min="0" required>
+
+            <label for="evenementsB">Nombre d'événements (n) B:</label>
+            <input type="number" id="evenementsB" min="0" required>
+
+            <button onclick="calculerProbabilite()">Calculer</button>
+        </div>
+
+        <div id="resultatsContainer" class="resultats-container" style="display: none;">
+            <!-- Les résultats seront ajoutés ici dynamiquement -->
+        </div>
+    </div>
+
+    <script src="{% static 'js/script2.js' %}"></script>
+</body>
+</html>

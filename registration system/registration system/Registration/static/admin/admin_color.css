@@ -1,0 +1,218 @@
+/* Couleur du texte et de l'arrière-plan de l'en-tête */
+#branding h1,
+#branding h1 a:link,
+#branding h1 a:visited {
+    color: #fff;
+}
+
+/* Taille de police de l'en-tête */
+#branding h1 {
+    font-size: x-large;
+}
+
+/* Couleur générale du texte */
+h1, h2, h3, h4, h5, h6, p, li, a {
+    color: #fff;
+}
+
+/* Arrière-plan général */
+body {
+    background: url("../images/background.jpg");
+    color: #801515;
+}
+
+/* Style de l'en-tête */
+#header {
+    background: crimson;
+    color: #fff;
+    height: 78px;
+}
+
+/* Couleur des liens de l'en-tête */
+#header a:link,
+#header a:visited {
+    color: #fff;
+}
+
+/* Style des miettes de pain */
+div.breadcrumbs {
+    background: firebrick;
+}
+
+/* Style des liens actifs dans les miettes de pain */
+div.breadcrumbs a.active {
+    color: #c4dce8 !important;
+    font-weight: 300;
+}
+
+/* Style des liens de miettes de pain au survol ou au focus */
+div.breadcrumbs a:focus,
+div.breadcrumbs a:hover {
+    color: #c4dce8 !important;
+    font-weight: 300;
+}
+
+/* Style des options sélectionnées dans un select */
+.select2-container--admin-autocomplete .select2-results__option--highlighted[aria-selected] {
+    background-color: #292D32;
+}
+
+/* Style des liens dans la pagination */
+.paginator a:link,
+.paginator a:visited {
+    background: #292D32;
+}
+
+/* Style des boutons */
+.button,
+input[type=submit],
+input[type=button],
+.submit-row input,
+a.button {
+    background: red;
+}
+
+/* Style des boutons au survol */
+.button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+    background: #878787;
+}
+
+/* Style des légendes de tableau */
+.module caption {
+    background: crimson;
+}
+
+/* Style des paragraphes dans les modules */
+.module p {
+    background: crimson;
+}
+
+/* Style des titres de modules */
+.module h2,
+.inline-group h2 {
+    background: red;
+}
+
+/* Style des liens de l'outil utilisateur */
+#user-tools a:focus,
+#user-tools a:hover {
+    border: 0;
+    color: #ddd;
+}
+
+/* Style des titres des sélecteurs */
+.selector-chosen h2 {
+    background: red !important;
+}
+
+/* Style des jours sélectionnés dans le calendrier */
+.calendar td.selected a {
+    background: red !important;
+}
+
+/* Style des jours dans le calendrier au survol ou au focus */
+.calendar td a:focus,
+.calendar td a:hover,
+.timelist a:focus,
+.timelist a:hover {
+    background: red !important;
+}
+
+/* Style des liens sélectionnés dans le filtre */
+#changelist-filter li.selected a {
+    color: red;
+}
+
+/* Style du bouton de collapse */
+fieldset.collapsed .collapse-toggle {
+    color: red;
+}
+
+/* Style des liens */
+a:link,
+a:visited {
+    color: #777;
+}
+
+/* Style des liens au survol ou au focus */
+a:focus,
+a:hover {
+    color: #999;
+}
+
+/* Style des options de tri dans les en-têtes de tableau */
+table thead th.sorted .sortoptions a.sortremove:focus:after,
+table thead th.sorted .sortoptions a.sortremove:hover:after {
+    color: red;
+}
+
+/* Style des liens actifs dans les sélecteurs */
+a.active.selector-chooseall:focus,
+a.active.selector-clearall:focus,
+a.active.selector-chooseall:hover,
+a.active.selector-clearall:hover {
+    color: #999;
+}
+
+/* Style des jours sélectionnés dans le calendrier */
+.calendar td a:active,
+.timelist a:active {
+    background: red;
+}
+
+/* Style des titres de calendrier et de boîte */
+.calendar caption,
+.calendarbox h2 {
+    background: #999;
+}
+
+/* Style des boutons par défaut */
+.button.default,
+input[type=submit].default,
+.submit-row input.default {
+    background: #417690;
+}
+
+/* Style des boutons par défaut au survol */
+.button.default:hover,
+input[type=submit].default:hover {
+    background: #191D22;
+}
+
+/* Style des outils d'objet au survol ou au focus */
+.object-tools a:focus,
+.object-tools a:hover {
+    background-color: #292D32;
+}
+
+/* Style du bouton de téléchargement de fichier au survol */
+input[type=file]::-webkit-file-upload-button:hover {
+    border: 0;
+    background: #292D32;
+}
+
+/* Style du filtre de liste */
+#changelist-filter {
+    top: -250px;
+    right: 15px;
+}
+
+/* Style du titre du filtre de liste */
+#changelist-filter h2 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Style des paragraphes */
+p {
+    color: wheat;
+}
+
+/* Style du titre principal */
+#content h1 {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 32px;
+}

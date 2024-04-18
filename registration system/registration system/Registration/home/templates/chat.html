@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+       
+        .sendbird-theme--light .sendbird-conversation {
+            background-color: rgb(212, 210, 226) !important;
+        }
+        .yYXFi {
+    width: inherit;
+    text-align: left;
+    word-break: break-word;
+    padding: 30px 52px;
+    gap: 4  2px;
+    white-space: pre-wrap;
+    background-color: rgb(233, 15, 15);
+
+
+}
+.jOETDI .sendbird-message-input .sendbird-message-input-text-field {
+    transition: width 0.5s ease 0s;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    line-height: 20px;
+    resize: none;
+    border: black;
+    outline: none;
+    height: 40px;
+    max-height: 116px;
+    background-color:#271469;
+    border-radius: 20px;
+    text-align: start;
+}
+
+.sendbird-theme--light .sendbird-label--color-onbackground-1 {
+    color: white;
+}
+.kwtPeZ {
+    background-color: rgb(20, 19, 20);
+    color: rgb(255, 255, 255);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    gap: 12px;
+    border-radius: 16px;
+    white-space: pre-wrap;
+}
+
+.lhAxOK {
+    position: fixed;
+    top: 0;
+    right: 190PX;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100PX;
+    bottom: 100PX;
+    right: 100PX;
+    border-radius: 0;
+    box-shadow: rgb(233, 15, 15);
+    transform-origin: center;
+    z-index: 10000;
+    pointer-events: all;
+    transform: scale(1);
+    opacity: 1;
+    transition: width 200ms ease 0s, height 200ms ease 0s, max-height 200ms ease 0s, transform 300ms cubic-bezier(0, 1.2, 1, 1) 0s, opacity 83ms ease-out 0s;
+}
+.jNHiRJ {
+    position: fixed;
+    z-index: 2147483647;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: rgb(217 221 45);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.31, -0.105, 0.43, 1.4) 0s;
+    border: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-shadow: rgba(33, 33, 33, 0.12) 0px 16px 24px 2px, rgba(33, 33, 33, 0.08) 0px 6px 30px 5px, rgba(33, 33, 33, 0.04) 0px 6px 10px -5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="ai">
+    <!-- Le chatbot sera ajouté ici -->
+    <script>
+        !function(w, d, s, ...args){
+          var div = d.createElement('div');
+          div.id = 'aichatbot';
+          d.body.appendChild(div);
+          w.chatbotConfig = args;
+
+          var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+          j.defer = true;
+          j.type = 'module';
+          j.src = 'https://aichatbot.sendbird.com/index.js';
+          f.parentNode.insertBefore(j, f);
+        }(window, document, 'script', '3B7D62C3-7EA1-49DF-AAD4-47E7EEA5C1F3', 'onboarding_bot');
+    </script>
+    </div>
+</body>
+</html>
